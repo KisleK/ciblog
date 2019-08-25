@@ -4,7 +4,7 @@
       $data['title'] = 'Sign Up';
 
       $this->form_validation->set_rules('name', 'Name', 'required');
-      $this->form_validation->set_rules('username', 'Username', 'required');
+      $this->form_validation->set_rules('username', 'Username', 'required|callback_check_username_exists');
       $this->form_validation->set_rules('email', 'Email', 'required');
       $this->form_validation->set_rules('password', 'Password', 'required|matches[password2]');
       $this->form_validation->set_rules('password2', 'Confirm Password', 'required');
@@ -15,8 +15,28 @@
         $this->load->view('templates/footer');
 
       } else {
-          die('Continue');
+        // Encrypt Password
+        $enc_password = md5($this->input->post('password'));
 
+        $this->user_model->register($enc_password);
+
+        //Set Message
+
+        $this->session->set_flashdata('user_registered', 'You are now a registered user of ciBlog');
+
+        redirect('posts');
+      }
+    }
+
+    // Check if username exists
+
+    function check_username_exists($username){
+      $this->form_validation->set_message('check_username_exists', 'That Username Is Already In Use. Please Choose Another Username');
+
+      if($this->user_model->check_username_exists($username)){
+          return true;
+      } else {
+          return false;
       }
     }
   }
