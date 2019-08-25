@@ -3,6 +3,7 @@
   <meta charset="UTF-8">
   <title>CodeIgniter Blog</title>
    <link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/lumen/bootstrap.min.css">
+   <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/style.css">
 <script src="https://cdn.ckeditor.com/4.12.1/standard/ckeditor.js"></script>
 </head>
 <body>
@@ -47,15 +48,3 @@
 <div class="container">
 
 
-<style>
-  .post-date {
-    background: #f4f4f4;
-    padding: 4px;
-    margin: 3px 0;
-    display: block;
-  }
-
-  .post-thumb {
-    width: 100%;
-  }
-</style>
