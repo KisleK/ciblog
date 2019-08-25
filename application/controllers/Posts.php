@@ -48,8 +48,8 @@
         $config['upload_path'] ='./assets/images/posts';
         $config['allowed_types'] ='gif|jpg|png|jpeg';
         $config['max_size'] ='5000';
-        $config['max_width'] ='1000';
-        $config['max_height'] ='1000';
+        $config['max_width'] ='2000';
+        $config['max_height'] ='2000';
 
         $this->load->library('upload', $config);
 
