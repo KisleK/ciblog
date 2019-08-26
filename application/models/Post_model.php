@@ -4,7 +4,12 @@
       $this->load->database();
     }
 // ------------------- GET POSTS---------------//
-    public function get_posts($slug = FALSE){
+    public function get_posts($slug = FALSE, $limit = FALSE, $offset = FALSE){
+
+      if($limit){
+        $this->db->limit($limit, $offset);
+      }
+
       if($slug === FALSE){
         $this->db->order_by('posts.id', 'DESC');
         $this->db->join('categories', 'categories.id = posts.category_id');
