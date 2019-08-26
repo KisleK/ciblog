@@ -94,7 +94,7 @@
     public function edit($slug){
        // Check Logged in
       if(!$this->session->userdata('logged_in')){
-        redirect('users/login') 
+        redirect('users/login'); 
       }
 
        $data['post'] =$this->post_model->get_posts($slug);
