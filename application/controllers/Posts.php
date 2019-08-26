@@ -29,6 +29,11 @@
     }
 
     public function create(){
+      // Check Logged in
+
+      if(!$this->session->userdata('logged_in')){
+        redirect('users/login');
+      }
 
       $data['title'] = 'Create Post';
 
@@ -73,6 +78,11 @@
     }
 
     public function delete($id){
+       // Check Logged in
+      if(!$this->session->userdata('logged_in')){
+        redirect('users/login');
+      }
+
       $this->post_model->delete_post($id);
 
       //Set Message
@@ -82,7 +92,18 @@
     }
 
     public function edit($slug){
+       // Check Logged in
+      if(!$this->session->userdata('logged_in')){
+        redirect('users/login'); 
+      }
+
        $data['post'] =$this->post_model->get_posts($slug);
+
+       //Check User
+       if($this->session->userdata('user_id') != $this->post_model->get_posts($slug)['user_id']){
+        redirect ('posts');
+
+       }
 
        $data['categories'] = $this->post_model->get_categories();
 
@@ -98,6 +119,11 @@
     }
 
     public function update (){
+       // Check Logged in
+      if(!$this->session->userdata('logged_in')){
+        redirect('users/login');
+      }
+
       $this->post_model->update_post();
        //Set Message
         $this->session->set_flashdata('post_updated', 'You Have Updated This Post');
