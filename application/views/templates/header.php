@@ -29,6 +29,9 @@
   background: #f4f4f4;
   border: 1px #ccc solid;
 }
+.cat-delete{
+  display: inline;
+}
 </style>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -118,3 +121,6 @@
     <?php echo '<p class="alert alert-danger">'.$this->session->flashdata('login_failed').'</p>'; ?>
   <?php endif; ?>
 
+<?php if($this->session->flashdata('category_deleted')): ?>
+    <?php echo '<p class="alert alert-danger">'.$this->session->flashdata('category_deleted').'</p>'; ?>
+  <?php endif; ?>
