@@ -6,6 +6,33 @@
    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/style.css">
 <script src="https://cdn.ckeditor.com/4.12.1/standard/ckeditor.js"></script>
 </head>
+<style type="text/css">
+    .post-date {
+    background: #f4f4f4;
+    padding: 4px;
+    margin: 3px 0;
+    display: block;
+  }
+
+  .post-thumb {
+    width: 100%;
+  }
+
+
+
+.pagination-links {
+  margin: 30px 0;
+}
+.pagination-links strong, a.pagination-link {
+  padding: 8px 15px;
+  margin: 5px;
+  background: #f4f4f4;
+  border: 1px #ccc solid;
+}
+.cat-delete{
+  display: inline;
+}
+</style>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <a class="navbar-brand" href="<?php echo base_url(); ?>">CI Blog</a>
@@ -94,3 +121,6 @@
     <?php echo '<p class="alert alert-danger">'.$this->session->flashdata('login_failed').'</p>'; ?>
   <?php endif; ?>
 
+<?php if($this->session->flashdata('category_deleted')): ?>
+    <?php echo '<p class="alert alert-danger">'.$this->session->flashdata('category_deleted').'</p>'; ?>
+  <?php endif; ?>
