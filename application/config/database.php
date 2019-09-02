@@ -76,10 +76,10 @@ $query_builder = TRUE;
 $db['default'] = array(
 	'dsn'	=> '',
 
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => '',
-	'database' => 'ciblog',
+	'hostname' => 'us-cdbr-iron-east-02.cleardb.net',
+	'username' => 'bfc61919e3be57',
+	'password' => '4813ef65',
+	'database' => '',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
