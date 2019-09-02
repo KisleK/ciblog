@@ -23,6 +23,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
+
+
+//Local DB
+$config['base_url'] = 'http://localhost/ciblog';
+
+//Production DB
 $config['base_url'] = 'https://codeigniter-blog.herokuapp.com/';
 
 /*
