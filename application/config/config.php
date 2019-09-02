@@ -26,10 +26,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 //Local DB
-$config['base_url'] = 'http://localhost/ciblog';
+// $config['base_url'] = 'http://localhost/ciblog';
 
 //LIVE DB
-// $config['base_url'] = 'https://codeigniter-blog.herokuapp.com/';
+$config['base_url'] = 'https://codeigniter-blog.herokuapp.com/';
 
 /*
 |--------------------------------------------------------------------------
@@ -388,10 +388,10 @@ $config['sess_cookie_name'] = 'ci_session';
 $config['sess_expiration'] = 7200;
 
 //When running Local
-$config['sess_save_path'] = NULL;
+// $config['sess_save_path'] = NULL;
 
 //When running LIVE
-// $config['sess_save_path'] = BASEPATH.'sessions';
+$config['sess_save_path'] = BASEPATH.'sessions';
 
 
 $config['sess_match_ip'] = FALSE;
