@@ -74,36 +74,12 @@ $active_group = 'default';
 $query_builder = TRUE;
 
 //Local DB
-$db['default'] = array(
-	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => '',
-	'database' => 'ciblog',
-	'dbdriver' => 'mysqli',
-	'dbprefix' => '',
-	'pconnect' => FALSE,
-	'db_debug' => (ENVIRONMENT !== 'production'),
-	'cache_on' => FALSE,
-	'cachedir' => '',
-	'char_set' => 'utf8',
-	'dbcollat' => 'utf8_general_ci',
-	'swap_pre' => '',
-	'encrypt' => FALSE,
-	'compress' => FALSE,
-	'stricton' => FALSE,
-	'failover' => array(),
-	'save_queries' => TRUE
-);
-
-
-//Production DB
 // $db['default'] = array(
 // 	'dsn'	=> '',
-// 	'hostname' => 'us-cdbr-iron-east-02.cleardb.net',
-// 	'username' => 'bfc61919e3be57',
-// 	'password' => '4813ef65',
-// 	'database' => 'heroku_5d577622d754f61',
+// 	'hostname' => 'localhost',
+// 	'username' => 'root',
+// 	'password' => '',
+// 	'database' => 'ciblog',
 // 	'dbdriver' => 'mysqli',
 // 	'dbprefix' => '',
 // 	'pconnect' => FALSE,
@@ -119,3 +95,27 @@ $db['default'] = array(
 // 	'failover' => array(),
 // 	'save_queries' => TRUE
 // );
+
+
+//LIVE DB
+$db['default'] = array(
+	'dsn'	=> '',
+	'hostname' => 'us-cdbr-iron-east-02.cleardb.net',
+	'username' => 'bfc61919e3be57',
+	'password' => '4813ef65',
+	'database' => 'heroku_5d577622d754f61',
+	'dbdriver' => 'mysqli',
+	'dbprefix' => '',
+	'pconnect' => FALSE,
+	'db_debug' => (ENVIRONMENT !== 'production'),
+	'cache_on' => FALSE,
+	'cachedir' => '',
+	'char_set' => 'utf8',
+	'dbcollat' => 'utf8_general_ci',
+	'swap_pre' => '',
+	'encrypt' => FALSE,
+	'compress' => FALSE,
+	'stricton' => FALSE,
+	'failover' => array(),
+	'save_queries' => TRUE
+);
