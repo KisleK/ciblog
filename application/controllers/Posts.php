@@ -42,14 +42,11 @@
 				$this->load->view('templates/footer');
 			} else {
 				// Upload Image
-				$config = array(
-				'upload_path' => '/Applications/XAMPP/xamppfiles/htdocs/ciblog/assets/images/posts',
-				'allowed_types' => 'gif|jpg|png|jpeg',
-				'max_size' => '2048',
-				'max_width' => '2000',
-				'max_height' => '2000'
-				);
-				
+				$config['upload_path'] = '<?php echo base_url();?>assets/images/posts';
+				$config['allowed_types'] = 'gif|jpg|png|jpeg';
+				$config['max_size'] = '2048';
+				$config['max_width'] = '2000';
+				$config['max_height'] = '2000';
 				$this->load->library('upload', $config);
 				if(!$this->upload->do_upload()){
 					$errors = array('error' => $this->upload->display_errors());
