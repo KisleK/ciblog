@@ -6,33 +6,7 @@
    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/style.css">
 <script src="https://cdn.ckeditor.com/4.12.1/standard/ckeditor.js"></script>
 </head>
-<style type="text/css">
-    .post-date {
-    background: #f4f4f4;
-    padding: 4px;
-    margin: 3px 0;
-    display: block;
-  }
 
-  .post-thumb {
-    width: 100%;
-  }
-
-
-
-.pagination-links {
-  margin: 30px 0;
-}
-.pagination-links strong, a.pagination-link {
-  padding: 8px 15px;
-  margin: 5px;
-  background: #f4f4f4;
-  border: 1px #ccc solid;
-}
-.cat-delete{
-  display: inline;
-}
-</style>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <a class="navbar-brand" href="<?php echo base_url(); ?>">CI Blog</a>
@@ -86,40 +60,41 @@
   </div>
 </nav>
 
+
     <div class="container">
       <!-- Flash messages -->
       <?php if($this->session->flashdata('user_registered')): ?>
-        <?php echo '<p class="alert alert-success">'.$this->session->flashdata('user_registered').'</p>'; ?>
+        <?php echo '<p class="alert alert-success flash-message">'.$this->session->flashdata('user_registered').'</p>'; ?>
       <?php endif; ?>
 
       <?php if($this->session->flashdata('post_created')): ?>
-        <?php echo '<p class="alert alert-success">'.$this->session->flashdata('post_created').'</p>'; ?>
+        <?php echo '<p class="alert alert-success flash-message">'.$this->session->flashdata('post_created').'</p>'; ?>
       <?php endif; ?>
 
       <?php if($this->session->flashdata('post_updated')): ?>
-        <?php echo '<p class="alert alert-success">'.$this->session->flashdata('post_updated').'</p>'; ?>
+        <?php echo '<p class="alert alert-success flash-message">'.$this->session->flashdata('post_updated').'</p>'; ?>
       <?php endif; ?>
 
       <?php if($this->session->flashdata('category_created')): ?>
-        <?php echo '<p class="alert alert-success">'.$this->session->flashdata('category_created').'</p>'; ?>
+        <?php echo '<p class="alert alert-success flash-message">'.$this->session->flashdata('category_created').'</p>'; ?>
       <?php endif; ?>
 
       <?php if($this->session->flashdata('post_deleted')): ?>
-        <?php echo '<p class="alert alert-danger">'.$this->session->flashdata('post_deleted').'</p>'; ?>
+        <?php echo '<p class="alert alert-danger flash-message">'.$this->session->flashdata('post_deleted').'</p>'; ?>
       <?php endif; ?>
 
       <?php if($this->session->flashdata('login_failed')): ?>
-        <?php echo '<p class="alert alert-danger">'.$this->session->flashdata('login_failed').'</p>'; ?>
+        <?php echo '<p class="alert alert-danger flash-message">'.$this->session->flashdata('login_failed').'</p>'; ?>
       <?php endif; ?>
 
       <?php if($this->session->flashdata('user_loggedin')): ?>
-        <?php echo '<p class="alert alert-success">'.$this->session->flashdata('user_loggedin').'</p>'; ?>
+        <?php echo '<p class="alert alert-success flash-message">'.$this->session->flashdata('user_loggedin').'</p>'; ?>
       <?php endif; ?>
 
        <?php if($this->session->flashdata('user_loggedout')): ?>
-        <?php echo '<p class="alert alert-success">'.$this->session->flashdata('user_loggedout').'</p>'; ?>
+        <?php echo '<p class="alert alert-success flash-message">'.$this->session->flashdata('user_loggedout').'</p>'; ?>
       <?php endif; ?>
 
       <?php if($this->session->flashdata('category_deleted')): ?>
-        <?php echo '<p class="alert alert-danger">'.$this->session->flashdata('category_deleted').'</p>'; ?>
+        <?php echo '<p class="alert alert-danger flash-message">'.$this->session->flashdata('category_deleted').'</p>'; ?>
       <?php endif; ?>

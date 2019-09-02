@@ -29,7 +29,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $config['base_url'] = 'http://localhost/ciblog';
 
 //Production DB
-$config['base_url'] = 'https://codeigniter-blog.herokuapp.com/';
+// $config['base_url'] = 'https://codeigniter-blog.herokuapp.com/';
 
 /*
 |--------------------------------------------------------------------------
