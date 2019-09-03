@@ -21,7 +21,7 @@
 </form> -->
 
 <?php
-echo form_open('/Sendingemail_Controller/send_mail');
+echo form_open('contacts/send_mail');
 ?>
 <input type = "email" name = "email" required />
 <input type = "submit" value = "SEND MAIL">

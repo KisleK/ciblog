@@ -13,7 +13,7 @@ $route['categories'] = 'categories/index';
 $route['categories/create'] = 'categories/create';
 $route['categoires/posts/(:any)'] = 'categories/posts/$1';
 
-$route['contacts/create'] = 'contacts/create';
+$route['contacts/send_mail'] = 'contacts/send_mail';
 
 
 $route['(:any)'] = 'pages/view/$1';
