@@ -1,6 +1,6 @@
 <h2><?= $title;?></h2>
-   <?php echo form_open('contacts/create'); ?>
-    <div class="form-group">
+   <?php //echo form_open('contacts/create'); ?>
+    <!-- <div class="form-group">
         <label>Name</label>
         <input type="text" name="name" class="form-control">
     </div>
@@ -18,7 +18,14 @@
     </div>
 
     <button class="btn btn-primary" type="submit">Send Email</button>
-</form>
+</form> -->
 
-
+<?php
+echo form_open('/Sendingemail_Controller/send_mail');
+?>
+<input type = "email" name = "email" required />
+<input type = "submit" value = "SEND MAIL">
+<?php
+echo form_close();
+?>
 
