@@ -1,5 +1,5 @@
 <?php
-composer require mailgun/mailgun-php:~1.7.2
+require 'mailgun/mailgun.php';
 # Include the Autoloader (see "Libraries" for install instructions)
 require 'vendor/autoload.php';
 use MailgunMailgun;
