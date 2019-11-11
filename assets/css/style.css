@@ -25,3 +25,7 @@
 .flash-message {
 	margin: 15px 0 10px 0;
 }
+
+#navbarColor01 > ul.navbar-nav.mr-auto > li:nth-child(3) {
+    display: none !important;
+}
